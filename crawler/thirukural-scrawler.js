@@ -11,7 +11,7 @@ firebaseSectionsRef.set(sections);
 firebaseChaptersRef.set(chapters);
 
 // Fetch kurals from getthirukural
-for (var i = 1; i <= 1330; i++) {
+for (var i = 1000; i <= 1330; i++) {
     var options = {
         url: 'http://getthirukural.appspot.com/api/2.0/kural/' + i + '?appid=m8gzum7bzuank&format=json',
         json: true,
@@ -54,7 +54,7 @@ for (var i = 1; i <= 1330; i++) {
             fireBaseObject.chapter = chapters[chapterIndex];
 
             // Store it to firefox
-            firebaseKuralsRef.child(number).set(fireBaseObject);
+            firebaseKuralsRef.child(number-1).set(fireBaseObject);
         }
     });
 }
