@@ -12,20 +12,20 @@ You can access the kurals, chapters and sections by following API
 
 **Kurals**
 
-    (https://thirukural.firebaseio.com/kurals.json)[https://thirukural.firebaseio.com/kurals.json]
+[https://thirukural.firebaseio.com/kurals.json](https://thirukural.firebaseio.com/kurals.json)
     
 **Particular Kural**
 
-    [https://thirukural.firebaseio.com/kurals/1.json](https://thirukural.firebaseio.com/kurals/1.json)
+[https://thirukural.firebaseio.com/kurals/1.json](https://thirukural.firebaseio.com/kurals/1.json)
 
 
 **Chapters**
 
-    [https://thirukural.firebaseio.com/chapters.json](https://thirukural.firebaseio.com/chapters.json)
+[https://thirukural.firebaseio.com/chapters.json](https://thirukural.firebaseio.com/chapters.json)
 
 **Sections**
 
-    [https://thirukural.firebaseio.com/sections.json](https://thirukural.firebaseio.com/sections.json)
+[https://thirukural.firebaseio.com/sections.json](https://thirukural.firebaseio.com/sections.json)
 
 
 Thanks [GetThirukural](http://getthirukural.appspot.com/) for the data.
