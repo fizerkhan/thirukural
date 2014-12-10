@@ -24,4 +24,4 @@ You can access the kurals, chapters and sections by following API
 
 
 Thanks [GetThirukural](http://getthirukural.appspot.com/) for the data.
-
+Font used [Droid Sans](http://fonts.googleapis.com/earlyaccess/droidsanstamil.css);
