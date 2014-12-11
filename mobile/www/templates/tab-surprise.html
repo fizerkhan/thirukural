@@ -1,0 +1,28 @@
+<ion-view title="Surprise">
+  <ion-content>
+
+    <swipe-cards>
+      <swipe-card on-card-swipe="cardSwiped()" id="start-card">
+        Swipe down for a new Kural
+      </swipe-card>
+      <swipe-card ng-repeat="kural in activeKurals" on-destroy="cardDestroyed($index)" on-card-swipe="cardSwiped($index)">
+        <div ng-controller="KuralCtrl">
+          <div class="kural">
+            <p class="kural-line tamil-text">{{kural.kural[0]}}</p>
+            <p class="kural-line tamil-text">{{kural.kural[1]}}</p>
+          </div>
+          <div class="meaning">
+            <p class="tamil-text">{{kural.meaning.ta_mu_va}}</p>
+            <p class="tamil-text">{{kural.meaning.ta_salamon}}</p>
+            <p>{{kural.meaning.en}}</p>
+          </div>
+          <div class="button-bar">
+            <button class="button button-clear button-positive" ng-click="goAway()">Answer</button>
+            <button class="button button-clear button-positive" ng-click="goAway()">Decline</button>
+          </div>
+        </div>
+      </swipe-card>
+    </swipe-cards>
+
+  </ion-content>
+</ion-view>

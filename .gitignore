@@ -1,4 +1,15 @@
 node_modules
+bower_components
+coverage
+platforms
+plugins
+
+# Temp files
+*.keystore
+*.sw*
 .tmp
 .sass-cache
-.DS_Store
+*.swp
+*.swo
+*.log
+*.DS_Store

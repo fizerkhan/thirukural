@@ -1,0 +1,23 @@
+/*
+ * Droid Sans Tamil (Tamil) http://www.google.com/fonts/earlyaccess
+ */
+@font-face {
+  font-family: 'Droid Sans Tamil';
+  font-style: normal;
+  font-weight: 400;
+  src: url(DroidSansTamil-Regular.eot);
+  src: url(DroidSansTamil-Regular.eot?#iefix) format('embedded-opentype'),
+       url(DroidSansTamil-Regular.woff2) format('woff2'),
+       url(DroidSansTamil-Regular.woff) format('woff'),
+       url(DroidSansTamil-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Droid Sans Tamil';
+  font-style: normal;
+  font-weight: 700;
+  src: url(DroidSansTamil-Bold.eot);
+  src: url(DroidSansTamil-Bold.eot?#iefix) format('embedded-opentype'),
+       url(DroidSansTamil-Bold.woff2) format('woff2'),
+       url(DroidSansTamil-Bold.woff) format('woff'),
+       url(DroidSansTamil-Bold.ttf) format('truetype');
+}
