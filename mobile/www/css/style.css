@@ -4,12 +4,6 @@
     font-family: 'Droid Sans Tamil', serif;
 }
 
-.about-icon:before {
-    font-size: 24px !important;
-    line-height: 24px !important;
-    color: #fafafa;
-}
-
 .tabs {
     height: 60px;
     background: #ede5e2 !important;
@@ -42,19 +36,12 @@
 }
 
 .about p {
-    font-size: 18px;
-    line-height: 32px;
+    font-size: 16px;
+    line-height: 28px;
     margin-bottom: 30px;
 }
 
-.ionic-logo {
-  display: block;
-  margin: 15px auto;
-  width: 96px;
-  height: 96px;
-}
-
-.pane {
+/*.pane {
   background-color: #333;
 }
 
@@ -66,20 +53,39 @@
 
 .bar .title {
   color: #eee;
-}
+}*/
+
+/* Swipe cards */
 
 .swipe-cards {
   position: fixed;
 }
 
-.swipe-card {
+/*.swipe-card {
   display: none;
   position: fixed;
   -webkit-transform: scale(1,1);
   left: 10%;
   top: 50%;
-  /*width: 300px;
-  height: 300px;*/
+  width: 300px;
+  height: 300px;
+  box-sizing: border-box;
+  background-color: rgb(255,255,255);
+  border-radius: 4px;
+  overflow: hidden;
+  -webkit-animation-fill-mode: forwards;
+}*/
+
+.swipe-card {
+  display: none;
+  position: fixed;
+  -webkit-transform: scale(1,1);
+  left: 50%;
+  top: 50%;
+  width: 600px;
+  height: 600px;
+  margin-left: -150px;
+  margin-top: -150px;
   box-sizing: border-box;
   background-color: rgb(255,255,255);
   border-radius: 4px;
@@ -121,9 +127,6 @@
   vertical-align: middle;
 }
 
-#footer .button {
-  color: #fff;
-}
 
 @-webkit-keyframes bounceIn {
   0% {
@@ -145,10 +148,11 @@
 }
 
 
+
 .kural {
     margin: 30px auto;
 }
 
 .meaning {
-    margin: 10px;
+    margin: 10px auto;
 }
