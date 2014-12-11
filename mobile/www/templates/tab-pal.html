@@ -1,0 +1,9 @@
+<ion-view title="All">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="pal in pals" type="item-text-wrap" ng-href="#/tab/chapters/{{$index}}">
+        <span class="item-name">{{pal}}</span>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

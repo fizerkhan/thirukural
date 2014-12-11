@@ -1,9 +1,5 @@
 /* Empty. Add your own CSS if you like */
 
-.tamil-text {
-    font-family: 'Droid Sans Tamil', serif;
-}
-
 .tabs {
     height: 60px;
     background: #ede5e2 !important;
@@ -19,7 +15,6 @@
 
 .tab-item .icon {
     display: block;
-    margin: 0 auto;
     padding-top: 5px;
     height: 32px;
     font-size: 32px;
@@ -28,10 +23,10 @@
 .tab-title {
     display: block;
     margin: 0 auto;
+    padding-top: 5px;
 }
 
 .about {
-    font-family: 'Lato', sans-serif;
     padding: 20px;
 }
 
@@ -41,19 +36,45 @@
     margin-bottom: 30px;
 }
 
-/*.pane {
-  background-color: #333;
+.tamil-text {
+    font-family: 'Droid Sans Tamil', serif;
+    font-size: 12px;
+    /* wrap long text and urls */
+    white-space: pre; /* CSS 2.0 */
+    white-space: pre-wrap; /* CSS 2.1 */
+    white-space: pre-line; /* CSS 3.0 */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    white-space: -moz-pre-wrap; /* Mozilla */
+    word-wrap: break-word; /* IE 5+ */
 }
 
-.bar.bar-transparent {
-  background-color: transparent;
-  background-image: none;
-  border: none;
+.item-name {
+    font-family: 'Droid Sans Tamil', serif;
 }
 
-.bar .title {
-  color: #eee;
-}*/
+.kurals-pane {
+    background-color: #f2bb13;
+}
+
+.kural {
+    padding: 15px 10px 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e2d7;
+    border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    color: #105b63;
+}
+
+.tamil-meaning {
+    padding: 10px 10px 0;
+}
+
+.english-meaning {
+    border-top: 1px solid #e0e2d7;
+    padding: 10px 10px 10px;
+}
 
 /* Swipe cards */
 
@@ -81,16 +102,23 @@
   position: fixed;
   -webkit-transform: scale(1,1);
   left: 50%;
-  top: 50%;
-  width: 600px;
-  height: 600px;
+  top: 40%;
+  width: 300px;
+  height: 380px;
   margin-left: -150px;
   margin-top: -150px;
   box-sizing: border-box;
   background-color: rgb(255,255,255);
-  border-radius: 4px;
-  overflow: hidden;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  background-color: #f6f6f6;
   -webkit-animation-fill-mode: forwards;
+  overflow: scroll;
+  -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+
 }
 
 .swipe-card .title {
@@ -99,6 +127,7 @@
   line-height: 30px;
   color: #444;
 }
+
 .swipe-card .image {
   overflow: hidden;
   max-height: 210px;
@@ -145,14 +174,4 @@
 }
 .swipe-card.pop-in {
   -webkit-animation: bounceIn 0.4s ease-out;
-}
-
-
-
-.kural {
-    margin: 30px auto;
-}
-
-.meaning {
-    margin: 10px auto;
 }

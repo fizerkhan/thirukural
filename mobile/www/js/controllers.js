@@ -1,40 +1,83 @@
 angular.module('thirukural.controllers', ['ngCordova', 'thirukural.services'])
 
-.controller('SurpriseCtrl', function($scope, JSONService) {
-    JSONService.all().then(function(response) {
-            $scope.thirukural = response.data;
-            $scope.kurals = $scope.thirukural.kurals;
-            $scope.activeKurals = Array.prototype.slice.call($scope.kurals, 0, 10);
+.controller('KuralsCtrl', function($scope, $stateParams, JSONService) {
+    // It can be used for both surprise as well as chapter kurals
+    var chapterIndex = $stateParams.chapter;
+    var kurals = [];
+    var maxSize = 1330;
+    var currentIndex = 0;
+    $scope.activeKurals = [];
+    JSONService.then(function(response) {
+            var thirukural = response.data;
+
+            if (chapterIndex) {
+                maxSize = 10;
+                chapterIndex = +chapterIndex;
+                $scope.title = thirukural.chapters[chapterIndex];
+
+                var beginIndex = chapterIndex * maxSize;
+                var endIndex = beginIndex + maxSize;
+                kurals = thirukural.kurals.slice(beginIndex, endIndex);
+                $scope.activeKurals.push(kurals[currentIndex]);
+                currentIndex++;
+
+            } else {
+                $scope.title = 'Surprise';
+                kurals = thirukural.kurals;
+                var newKural = kurals[Math.floor(Math.random() * maxSize)];
+                $scope.activeKurals.push(newKural);
+            }
         });
 
     $scope.cardSwiped = function(index) {
-        $scope.addCard();
+        $scope.addCard(index);
     };
 
     $scope.cardDestroyed = function(index) {
         $scope.activeKurals.splice(index, 1);
     };
 
-    $scope.addCard = function() {
-        var newKural = $scope.kurals[Math.floor(Math.random() * $scope.kurals.length)];
-        newKural.id = Math.random();
-        $scope.activeKurals.push(angular.extend({}, newKural));
+    $scope.addCard = function(index) {
+        if (typeof chapterIndex !== 'undefined') {
+            var newKural = kurals[currentIndex];
+            $scope.activeKurals.push(newKural);
+            if (currentIndex === 9) {
+                currentIndex = 0;
+            } else {
+                currentIndex++;
+            }
+        } else {
+            var newKural = kurals[Math.floor(Math.random() * maxSize)];
+            $scope.activeKurals.push(newKural);
+        }
     }
 })
 
-.controller('KuralCtrl', function($scope, $ionicSwipeCardDelegate) {
-
+.controller('CardCtrl', function($scope, $ionicSwipeCardDelegate) {
     $scope.goAway = function() {
         var card = $ionicSwipeCardDelegate.getSwipebleCard($scope);
         card.swipe();
     };
 })
 
-.controller('AllKuralsCtrl', function($scope, JSONService) {
-    // JSONService.all().then(function(response) {
-    //         $scope.thirukural = response.data;
-    //         $scope.kurals = $scope.thirukural.kurals;
-    //     });
+.controller('PalCtrl', function($scope, JSONService) {
+    JSONService.then(function(response) {
+            $scope.pals = response.data.pals;
+        });
+})
+
+.controller('ChaptersCtrl', function($scope, $stateParams, JSONService) {
+    var pal = +$stateParams.pal;
+    JSONService.then(function(response) {
+            $scope.title = response.data.pals[pal];
+            if (pal === 0) {
+                $scope.chapters = response.data.chapters.slice(0, 39);
+            } else if (pal === 1) {
+                $scope.chapters = response.data.chapters.slice(39, 109);
+            } else if (pal === 2) {
+                $scope.chapters = response.data.chapters.slice(109);
+            }
+        });
 })
 
 

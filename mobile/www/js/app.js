@@ -32,18 +32,38 @@ angular.module('thirukural', ['ionic', 'ionic.contrib.ui.cards',
       url: '/surprise',
       views: {
         'tab-surprise': {
-          templateUrl: 'templates/tab-surprise.html',
-          controller: 'SurpriseCtrl'
+          templateUrl: 'templates/kurals.html',
+          controller: 'KuralsCtrl'
         }
       }
     })
 
-    .state('tab.all', {
-      url: '/all',
+    .state('tab.pal', {
+      url: '/pal',
       views: {
-        'tab-all': {
-          templateUrl: 'templates/tab-all.html',
-          controller: 'AllKuralsCtrl'
+        'tab-pal': {
+          templateUrl: 'templates/tab-pal.html',
+          controller: 'PalCtrl'
+        }
+      }
+    })
+
+    .state('tab.chapters', {
+      url: '/chapters/:pal',
+      views: {
+        'tab-pal': {
+          templateUrl: 'templates/chapters.html',
+          controller: 'ChaptersCtrl'
+        }
+      }
+    })
+
+    .state('tab.kurals', {
+      url: '/kurals/:chapter',
+      views: {
+        'tab-pal': {
+          templateUrl: 'templates/kurals.html',
+          controller: 'KuralsCtrl'
         }
       }
     })
