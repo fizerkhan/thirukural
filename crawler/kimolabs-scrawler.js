@@ -2,13 +2,13 @@
 var request = require('request');
 var _ = require('underscore');
 var fs = require('fs');
-var thirukuralData = require('./thirukural.json');
+var thirukuralData = require('../crawler/thirukural.json');
 var kurals = thirukuralData.kurals;
 
 console.log(__dirname);
 function saveFile() {
   var result = JSON.stringify(thirukuralData, null, 2);
-  fs.writeFile(__dirname + '/thirukural.json', result, function(err) {
+  fs.writeFile(__dirname + '/../crawler/thirukural.json', result, function(err) {
     if(err) {
       console.log(err);
     } else {
@@ -17,8 +17,10 @@ function saveFile() {
   });
 }
 
-var tamilArray = require('./thirukural-ta.json');
-var englishArray = require('./thirukural-en.json');
+var tamilArray = require('../crawler/thirukural-ta.json');
+var englishArray = require('../crawler/thirukural-en.json');
+
+// Save to file
 
 for (var j = 0; j < tamilArray.length; j++) {
     var object = tamilArray[j];
@@ -41,14 +43,15 @@ for (var j = 0; j < englishArray.length; j++) {
 
 saveFile();
 
+// // Find Missing indexes
 // var kuralsIndexes = [];
 // for (var i = 1; i <= 1330; i++) {
 //     kuralsIndexes.push(i);
 // }
 
 // var availableIndexes = [];
-// for (var i = 0; i < englishArray.length; i++) {
-//     var number = parseInt(englishArray[i].url.split('=')[1]);
+// for (var i = 0; i < tamilArray.length; i++) {
+//     var number = parseInt(tamilArray[i].url.split('=')[1]);
 //     availableIndexes.push(number);
 // };
 // availableIndexes = _.uniq(availableIndexes);
@@ -59,10 +62,6 @@ saveFile();
 // console.log('Length ' + availableIndexes.length);
 // console.log(diffArray.join(','));
 
-// for (var j = 0; j < diffArray.length; j++) {
-//     // console.log('http://www.dinamalar.com/kural_detail.asp?kural_no=' + diffArray[j]);
-//     console.log('http://www.dinamalar.com/kural_detail_en.asp?kural_no=' + diffArray[j]);
-// }
 
 
 
