@@ -2,7 +2,6 @@
 
 .tabs {
     height: 60px;
-    background: #ede5e2 !important;
     border-top-color: #b2b2b2 !important;
 }
 
@@ -10,7 +9,7 @@
 .tab-item.active,
 .tab-item.activated {
     opacity: 1;
-    color: #fd7400;
+    color: #fff;
 }
 
 .tab-item .icon {
@@ -82,20 +81,6 @@
   position: fixed;
 }
 
-/*.swipe-card {
-  display: none;
-  position: fixed;
-  -webkit-transform: scale(1,1);
-  left: 10%;
-  top: 50%;
-  width: 300px;
-  height: 300px;
-  box-sizing: border-box;
-  background-color: rgb(255,255,255);
-  border-radius: 4px;
-  overflow: hidden;
-  -webkit-animation-fill-mode: forwards;
-}*/
 
 .swipe-card {
   display: none;
@@ -108,11 +93,10 @@
   margin-left: -150px;
   margin-top: -150px;
   box-sizing: border-box;
-  background-color: rgb(255,255,255);
   border-radius: 10px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
-  background-color: #f6f6f6;
+  background-color: #fafafa;
   -webkit-animation-fill-mode: forwards;
   overflow: scroll;
   -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
