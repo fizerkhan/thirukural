@@ -2,13 +2,13 @@
 var request = require('request');
 var _ = require('underscore');
 var fs = require('fs');
-var thirukuralData = require('../crawler/thirukural.json');
+var thirukuralData = require('../data/thirukural.json');
 var kurals = thirukuralData.kurals;
 
 console.log(__dirname);
 function saveFile() {
   var result = JSON.stringify(thirukuralData, null, 2);
-  fs.writeFile(__dirname + '/../crawler/thirukural.json', result, function(err) {
+  fs.writeFile(__dirname + '/../data/thirukural.json', result, function(err) {
     if(err) {
       console.log(err);
     } else {
@@ -17,8 +17,8 @@ function saveFile() {
   });
 }
 
-var tamilArray = require('../crawler/thirukural-ta.json');
-var englishArray = require('../crawler/thirukural-en.json');
+var tamilArray = require('../data/thirukural-ta.json');
+var englishArray = require('../data/thirukural-en.json');
 
 // Save to file
 
