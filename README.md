@@ -1,32 +1,31 @@
 ## Thirukural
 
-The Thirukkural is one of the most important works in the Tamil language.
+The Thirukural is one of the most important works in the Tamil language.
 The purpose of this project is to create UI rich web and mobile application for Thirukural.
 
-Feel free to fork and contribute to this project. If you have any doubts,
-[Tweet me](https://twitter.com/fizerkhan)
+### Data
 
-### API
+You can find complete kurals with meaning in both tamil and english
+in the folder [/data/thirukural.json](https://github.com/fizerkhan/thirukural/tree/master/data)
 
-You can access the kurals, chapters and sections by following API
+### Android App
 
-**Kurals**
+Android App for Thirukural built in [Ionic Framework](http://ionicframework.com/).
 
-[https://thirukural.firebaseio.com/kurals.json](https://thirukural.firebaseio.com/kurals.json)
-    
-**Particular Kural**
+[Download in Google Play](https://play.google.com/store/apps/details?id=com.fizerkhan.thirukural)
 
-[https://thirukural.firebaseio.com/kurals/1.json](https://thirukural.firebaseio.com/kurals/1.json)
+### Pending Features
 
+1. Kural number instead of sequence number
+2. Athikaram number
+3. Swipe up for old kurals
 
-**Chapters**
+### Contribute
 
-[https://thirukural.firebaseio.com/chapters.json](https://thirukural.firebaseio.com/chapters.json)
+Your contribution are always welcome. Feel free to fork and
+contribute to this project. If you have any doubts,
+[Tweet @fizerkhan](https://twitter.com/fizerkhan)
 
-**Sections**
+### Kudos
 
-[https://thirukural.firebaseio.com/sections.json](https://thirukural.firebaseio.com/sections.json)
-
-
-Thanks [GetThirukural](http://getthirukural.appspot.com/) for the data.
 Font used [Droid Sans](http://fonts.googleapis.com/earlyaccess/droidsanstamil.css);
