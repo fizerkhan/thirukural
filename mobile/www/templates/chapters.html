@@ -2,6 +2,7 @@
   <ion-content>
     <ion-list>
       <ion-item class="item-icon-right" ng-repeat="chapter in chapters track by $index" type="item-text-wrap" ng-href="#/tab/kurals/{{$index + chapterStartIndex}}">
+        <span class="item-number">{{$index + chapterStartIndex + 1}}.</span>
         <span class="item-name">{{chapter}}</span>
         <i class="icon ion-chevron-right icon-accessory"></i>
       </ion-item>

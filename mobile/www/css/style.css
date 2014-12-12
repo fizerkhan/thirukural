@@ -48,6 +48,10 @@
     word-wrap: break-word; /* IE 5+ */
 }
 
+.item-number {
+    color: #ababab;
+}
+
 .item-name {
     font-family: 'Droid Sans Tamil', serif;
 }
