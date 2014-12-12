@@ -54,7 +54,7 @@
 
 .pal-list-item {
     font-size: 22px;
-    color: #f28e13 !important;
+    color: #333 !important;
     text-align: center;
     padding-top: 25px;
     padding-bottom: 25px;
@@ -107,7 +107,9 @@
   position: absolute;
   right: 20px;
   bottom: 0;
-  color: #efefef;
+  color: #444;
+  margin-top: 5px;
+  margin-bottom: 5px;
   font-size: 10px;
 }
 
@@ -117,17 +119,13 @@
   position: fixed;
 }
 
-
 .swipe-card {
   display: none;
   position: fixed;
   -webkit-transform: scale(1,1);
-  left: 50%;
-  top: 40%;
-  width: 300px;
+  width: auto;
   height: 380px;
-  margin-left: -150px;
-  margin-top: -150px;
+  margin: 54px 10px 10px;
   box-sizing: border-box;
   border-radius: 10px;
   -moz-border-radius: 10px;
