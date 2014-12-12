@@ -1,13 +1,15 @@
 <ion-view title="All">
-  <ion-content>
+  <ion-content class="pal-pane">
     <div class="card list pal-list" ng-repeat="pal in pals">
-      <a class="item pal-list-item  item-text-wrap"  ng-href="#/tab/chapters/{{$index}}">
+      <a class="item pal-list-item item-icon-right item-text-wrap"  ng-href="#/tab/chapters/{{$index}}">
         <span class="item-name">{{pal}}</span>
+        <i class="icon ion-chevron-right icon-accessory"></i>
       </a>
     </div>
     <div class="card list pal-list">
-      <a class="item pal-list-item item-text-wrap"  ng-href="#/tab/chapters/3">
+      <a class="item pal-list-item item-icon-right item-text-wrap"  ng-href="#/tab/chapters/3">
         <span class="item-name">அதிகாரங்கள்</span>
+        <i class="icon ion-chevron-right icon-accessory"></i>
       </a>
     </div>
   </ion-content>
