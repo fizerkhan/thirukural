@@ -13,6 +13,9 @@ angular.module('thirukural', ['ionic', 'ionic.contrib.ui.cards',
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+
+    // Hige splash screen
+    navigator.splashscreen.hide()
   });
 })
 

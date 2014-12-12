@@ -1,15 +1,14 @@
 <ion-view title="{{title}}">
+
   <ion-content class="kurals-pane">
 
     <swipe-cards>
-      <!-- <swipe-card on-card-swipe="cardSwiped()" id="start-card">
-        Swipe down for a new Kural
-      </swipe-card> -->
       <swipe-card ng-repeat="kural in activeKurals" on-destroy="cardDestroyed($index)" on-card-swipe="cardSwiped($index)">
         <div ng-controller="CardCtrl">
           <div class="kural">
             <p class="kural-line tamil-text">{{kural.kural[0]}}</p>
             <p class="kural-line tamil-text">{{kural.kural[1]}}</p>
+            <span class="pull-right tamil-text kural-reference">{{kural.section}} : {{kural.chapter}} : குறள் {{getKuralNumber(kural.number)}}</span>
           </div>
           <div class="meaning">
             <div class="tamil-meaning">
@@ -20,13 +19,11 @@
                 <p>{{kural.meaning.en}}</p>
             </div>
           </div>
-          <!-- <div class="button-bar">
-            <button class="button button-clear button-positive" ng-click="goAway()">Answer</button>
-            <button class="button button-clear button-positive" ng-click="goAway()">Decline</button>
-          </div> -->
         </div>
       </swipe-card>
     </swipe-cards>
+
+    <p class="tips">Swipe down for a new Kural</p>
 
   </ion-content>
 </ion-view>

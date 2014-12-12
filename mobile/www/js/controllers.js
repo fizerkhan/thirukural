@@ -51,6 +51,14 @@ angular.module('thirukural.controllers', ['ngCordova', 'thirukural.services'])
             $scope.activeKurals.push(newKural);
         }
     }
+
+    $scope.getKuralNumber = function (number) {
+        var reminder = number % 10;
+        if (!reminder) {
+            reminder = 10;
+        }
+        return reminder;
+    }
 })
 
 .controller('CardCtrl', function($scope, $ionicSwipeCardDelegate) {
@@ -71,11 +79,18 @@ angular.module('thirukural.controllers', ['ngCordova', 'thirukural.services'])
     JSONService.then(function(response) {
             $scope.title = response.data.pals[pal];
             if (pal === 0) {
-                $scope.chapters = response.data.chapters.slice(0, 39);
+                $scope.chapterStartIndex = 0;
+                $scope.chapters = response.data.chapters.slice($scope.chapterStartIndex, 38);
             } else if (pal === 1) {
-                $scope.chapters = response.data.chapters.slice(39, 109);
+                $scope.chapterStartIndex = 38;
+                $scope.chapters = response.data.chapters.slice($scope.chapterStartIndex, 108);
             } else if (pal === 2) {
-                $scope.chapters = response.data.chapters.slice(109);
+                $scope.chapterStartIndex = 108;
+                $scope.chapters = response.data.chapters.slice($scope.chapterStartIndex);
+            } else {
+                $scope.chapterStartIndex = 0;
+                $scope.chapters = response.data.chapters.slice();
+                $scope.title = 'அதிகாரங்கள்';
             }
         });
 })
@@ -84,7 +99,7 @@ angular.module('thirukural.controllers', ['ngCordova', 'thirukural.services'])
 .controller('AboutCtrl', function($scope, $cordovaSocialSharing, $location) {
 
     $scope.share = function () {
-        var message = "Thirukural is an awesome free app for Thirukural." +
+        var message = "Thirukural is an awesome free app for classic Tamil sangam literature Thirukural." +
             "\n\nDownload it from here "+
             "https://play.google.com/store/apps/details?id=com.fizerkhan.thirukural";
         $cordovaSocialSharing.share(message, 'Share Thirukural with you', null, null);
@@ -92,7 +107,7 @@ angular.module('thirukural.controllers', ['ngCordova', 'thirukural.services'])
 
     $scope.feedback = function () {
         $cordovaSocialSharing
-            .shareViaEmail('', 'Thirukural Feedback', 'fizerkhan@gmail.com');
+            .shareViaEmail('', 'Thirukural app feedback', 'fizerkhan@gmail.com');
     }
 
     $scope.rateUs = function () {

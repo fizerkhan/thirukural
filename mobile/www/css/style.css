@@ -52,8 +52,26 @@
     font-family: 'Droid Sans Tamil', serif;
 }
 
+.pal-list-item {
+    font-size: 22px;
+    color: #fff !important;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #fe8c00;
+    background: -webkit-linear-gradient(90deg, #fe8c00 10%, #f83600 90%); /* Chrome 10+, Saf5.1+ */
+    background:    -moz-linear-gradient(90deg, #fe8c00 10%, #f83600 90%); /* FF3.6+ */
+    background:     -ms-linear-gradient(90deg, #fe8c00 10%, #f83600 90%); /* IE10 */
+    background:      -o-linear-gradient(90deg, #fe8c00 10%, #f83600 90%); /* Opera 11.10+ */
+    background:         linear-gradient(90deg, #fe8c00 10%, #f83600 90%); /* W3C */
+}
+
 .kurals-pane {
-    background-color: #f2bb13;
+    background: -webkit-linear-gradient(90deg, #FF8008 10%, #FFC837 90%); /* Chrome 10+, Saf5.1+ */
+    background:    -moz-linear-gradient(90deg, #FF8008 10%, #FFC837 90%); /* FF3.6+ */
+    background:     -ms-linear-gradient(90deg, #FF8008 10%, #FFC837 90%); /* IE10 */
+    background:      -o-linear-gradient(90deg, #FF8008 10%, #FFC837 90%); /* Opera 11.10+ */
+    background:         linear-gradient(90deg, #FF8008 10%, #FFC837 90%); /* W3C */
 }
 
 .kural {
@@ -66,6 +84,16 @@
     color: #105b63;
 }
 
+.kural-line {
+    margin-bottom: 5px;
+}
+
+.kural-reference {
+    display: block;
+    font-size: 10px;
+    color: #999;
+}
+
 .tamil-meaning {
     padding: 10px 10px 0;
 }
@@ -73,6 +101,14 @@
 .english-meaning {
     border-top: 1px solid #e0e2d7;
     padding: 10px 10px 10px;
+}
+
+.tips {
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  color: #efefef;
+  font-size: 10px;
 }
 
 /* Swipe cards */

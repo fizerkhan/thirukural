@@ -1,7 +1,7 @@
 <ion-view title="{{title}}">
   <ion-content>
     <ion-list>
-      <ion-item ng-repeat="chapter in chapters" type="item-text-wrap" ng-href="#/tab/kurals/{{$index}}">
+      <ion-item ng-repeat="chapter in chapters track by $index" type="item-text-wrap" ng-href="#/tab/kurals/{{$index + chapterStartIndex}}">
         <span class="item-name">{{chapter}}</span>
       </ion-item>
     </ion-list>
