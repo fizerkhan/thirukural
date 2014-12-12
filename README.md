@@ -6,7 +6,7 @@ The purpose of this project is to create UI rich web and mobile application for 
 ### Data
 
 You can find complete kurals with meaning in both tamil and english
-in the folder [thirukural.json](https://github.com/fizerkhan/thirukural/tree/master/data)
+in the folder [data](https://github.com/fizerkhan/thirukural/tree/master/data)
 
 ### Android App
 
