@@ -1,12 +1,12 @@
 ## Thirukural
 
-The Thirukural is one of the most important works in the Tamil language.
+Thirukural is one of the most important works in the Tamil language.
 The purpose of this project is to create UI rich web and mobile application for Thirukural.
 
 ### Data
 
 You can find complete kurals with meaning in both tamil and english
-in the folder [/data/thirukural.json](https://github.com/fizerkhan/thirukural/tree/master/data)
+in the folder [thirukural.json](https://github.com/fizerkhan/thirukural/tree/master/data)
 
 ### Android App
 
@@ -24,7 +24,7 @@ Android App for Thirukural built in [Ionic Framework](http://ionicframework.com/
 
 Your contribution are always welcome. Feel free to fork and
 contribute to this project. If you have any doubts,
-[Tweet @fizerkhan](https://twitter.com/fizerkhan)
+[tweet @fizerkhan](https://twitter.com/fizerkhan)
 
 ### Kudos
 
