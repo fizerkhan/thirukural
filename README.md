@@ -16,9 +16,9 @@ Android App for Thirukural built in [Ionic Framework](http://ionicframework.com/
 
 ### Pending Features
 
-1. Kural number instead of sequence number
-2. Athikaram number
-3. Swipe up for old kurals
+1. Swipe up for old kurals.
+2. Share with friends option.
+3. Option to show and hide English meaning.
 
 ### Contribute
 
