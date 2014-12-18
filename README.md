@@ -12,7 +12,7 @@ in the [data](https://github.com/fizerkhan/thirukural/tree/master/data) folder
 
 Android App for Thirukural built in [Ionic Framework](http://ionicframework.com/).
 
-[Download in Google Play](https://play.google.com/store/apps/details?id=com.fizerkhan.thirukural)
+![https://github.com/fizerkhan/thirukural/blob/master/badges/google-play.png](https://play.google.com/store/apps/details?id=com.fizerkhan.thirukural)
 
 ### Pending Features
 
