@@ -8,7 +8,7 @@
           <div class="kural">
             <p class="kural-line tamil-text">{{kural.kural[0]}}</p>
             <p class="kural-line tamil-text">{{kural.kural[1]}}</p>
-            <span class="pull-right tamil-text kural-reference">{{kural.section}} : {{kural.chapter}} : குறள் {{kural.number}}</span>
+            <span class="tamil-text kural-reference">{{kural.section}} : {{kural.chapter}} : குறள் {{kural.number}}</span>
           </div>
           <div class="meaning">
             <div class="tamil-meaning">
@@ -22,8 +22,12 @@
         </div>
       </swipe-card>
     </swipe-cards>
-
-    <!-- <p class="tips">Swipe down for a new Kural</p> -->
-
   </ion-content>
+
+  <ion-footer-bar class="footer-custom hide-on-keyboard-open">
+    <a class="button button-stable ion-share" ng-click="share()">
+      Share
+    </a>
+  </ion-footer-bar>
+
 </ion-view>

@@ -1,6 +1,6 @@
 angular.module('thirukural.controllers', ['ngCordova', 'thirukural.services'])
 
-.controller('KuralsCtrl', function($scope, $stateParams, JSONService) {
+.controller('KuralsCtrl', function($scope, $stateParams, JSONService, $cordovaSocialSharing) {
     // It can be used for both surprise as well as chapter kurals
     var chapterIndex = $stateParams.chapter;
     var kurals = [];
@@ -59,6 +59,16 @@ angular.module('thirukural.controllers', ['ngCordova', 'thirukural.services'])
         }
         return reminder;
     }
+
+    $scope.share = function () {
+        var kural = $scope.activeKurals[0];
+        var message = kural.kural[0] + '\n' + kural.kural[1] + '\n\n' +
+                      kural.meaning.ta_mu_va +  '\n\n' +
+                      kural.meaning.ta_salamon + '\n\n' +
+                      kural.meaning.en + '\n';
+        $cordovaSocialSharing.share(message, 'This Kural is awesome!', null, null);
+    }
+
 })
 
 .controller('CardCtrl', function($scope, $ionicSwipeCardDelegate) {

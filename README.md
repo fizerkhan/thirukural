@@ -17,8 +17,7 @@ Android App for Thirukural built in [Ionic Framework](http://ionicframework.com/
 ### Pending Features
 
 1. Swipe up for old kurals.
-2. Share with friends option.
-3. Option to show and hide English meaning.
+2. Option to show and hide English meaning.
 
 ### Contribute
 

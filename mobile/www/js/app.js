@@ -15,7 +15,7 @@ angular.module('thirukural', ['ionic', 'ionic.contrib.ui.cards',
     }
 
     // Hige splash screen
-    navigator.splashscreen.hide()
+    navigator.splashscreen.hide();
   });
 })
 

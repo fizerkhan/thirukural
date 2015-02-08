@@ -1,5 +1,9 @@
 /* Empty. Add your own CSS if you like */
 
+.bar-positive.bar-header {
+    border-color: #369AD9 !important;
+}
+
 .tabs {
     height: 60px;
     border-top-color: #b2b2b2 !important;
@@ -78,6 +82,12 @@
     background:         linear-gradient(90deg, #FF8008 10%, #FFC837 90%); /* W3C */
 }
 
+.kurals-pane .scroll {
+    height: -moz-calc(100% - 90px); /* Firefox */
+    height: -webkit-calc(100% - 90px); /* Chrome, Safari */
+    height: calc(100% - 90px); /* IE9+ and future browsers */
+}
+
 .kural {
     padding: 15px 10px 10px;
     background-color: #fff;
@@ -107,6 +117,19 @@
     padding: 10px 10px 10px;
 }
 
+.footer-custom {
+    background: -webkit-linear-gradient(90deg, #FF8008 10%, #FFC837 90%);
+    background: -moz-linear-gradient(90deg, #FF8008 10%, #FFC837 90%);
+    background: -ms-linear-gradient(90deg, #FF8008 10%, #FFC837 90%);
+    background: -o-linear-gradient(90deg, #FF8008 10%, #FFC837 90%);
+    background: linear-gradient(90deg, #FF8008 10%, #FFC837 90%);
+    margin: 0 auto;
+}
+
+.footer-custom .button {
+    margin: 0 auto;
+}
+
 .tips {
   position: absolute;
   right: 20px;
@@ -129,7 +152,7 @@
   -webkit-transform: scale(1,1);
   width: auto;
   height: 380px;
-  margin: 54px 10px 10px;
+  margin: 115px 10px 10px;
   box-sizing: border-box;
   border-radius: 10px;
   -moz-border-radius: 10px;
@@ -140,7 +163,9 @@
   -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-
+  height: -moz-calc(100% - 10px); /* Firefox */
+  height: -webkit-calc(100% - 10px); /* Chrome, Safari */
+  height: calc(100% - 10px); /* IE9+ and future browsers */
 }
 
 .swipe-card .title {
@@ -148,18 +173,6 @@
   padding: 5px;
   line-height: 30px;
   color: #444;
-}
-
-.swipe-card .image {
-  overflow: hidden;
-  max-height: 210px;
-}
-.swipe-card .button {
-  border: none;
-}
-.swipe-card .image img {
-  width: 100%;
-  border-radius: 0px 0px 4px 4px;
 }
 
 #start-card {

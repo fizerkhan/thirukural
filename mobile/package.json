@@ -1,6 +1,6 @@
 {
   "name": "Thirukural",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "Thirukural: The Classic of Tamil Literature.",
   "dependencies": {
     "gulp": "^3.5.6",
